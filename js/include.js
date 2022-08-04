@@ -3,6 +3,7 @@ END_DATE = "December 31, 2022 00:00:00"
 let i = 0;
 let currentInterval = "";
 
+console.log("Version: 1");
 
 window.onload = function() {
     countDownSwitcher(i);
@@ -27,17 +28,24 @@ function buttonCountDownMilliseconds(){
 
 function countDownSwitcher() {
     clearInterval(currentInterval);
+    gEbIDclass("buttonDefault", "button");
+    gEbIDclass("buttonMS", "button");
+
     if (i == 0) {
+        gEbIDclass("buttonDefault", "button active");
         countDownDefault();
     } else if (i == 1) {
         countDownMilliseconds();
+        gEbIDclass("buttonMS", "button active");
     } else{
         countDownDefault();
+        gEbIDclass("buttonDefault", "button active");
         i = 0;
     }
 }
 
 function gEbID(ID, content) {document.getElementById(ID).innerHTML = content; }
+function gEbIDclass(ID, newClass) {document.getElementById(ID).className = newClass; }
 
 function fullCountDownDefault(){
     var countDownDate = new Date(END_DATE).getTime();

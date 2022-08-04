@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stylesheet.css?0">
+    <link rel="stylesheet" href="./css/stylesheet.css?1">
     <title>Retirement Countdown</title>
 </head>
 <body>
@@ -12,14 +12,18 @@
     <div id="countdown-container"></div>
 
     <div class="button-container">
-        <button class="button" onClick = "buttonCountDownDefault()">Days/Hours/Minutes/Seconds</button>
-        <button class="button" onClick = "buttonCountDownMilliseconds()">Milliseconds</button>
+        <button id="buttonDefault" class="button" onClick = "buttonCountDownDefault()">Days/Hours/Minutes/Seconds</button>
+        <button id="buttonMS" class="button" onClick = "buttonCountDownMilliseconds()">Milliseconds</button>
     </div>
 
 
 	<div class="text-until">Until</div><div class="text">Joe Michal</div><div id="text-retires" class="text text-retires">retires!</div>
 
 
-    <script src="./js/include.js?0"></script>
+    <script src="./js/include.js?1"></script>
 </body>
+<footer>
+    <!-- Reminder to think critically -->
+    <p>&copy; Copyright 2022 Chase Curtis | Question Everything | Version 1</p>
+</footer>
 </html>

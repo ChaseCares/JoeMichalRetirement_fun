@@ -6,6 +6,13 @@ body{
     background-color: #222222;
 }
 
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 1%;
+}
+
 .digit{
     font-size: 8em;
     text-align: center;
@@ -73,6 +80,11 @@ body{
     color: white;
 }
 
+.button.active {
+    background-color: #555555; /* Green */
+    color: white;
+}
+
 #countdown-container{
     display: grid;
 }
@@ -84,8 +96,3 @@ body{
     justify-content: space-evenly;
     text-align: center;
 }
-
-
-/* #days{
-    color: #50d6c9;
-} */
