@@ -3,7 +3,7 @@ END_DATE = "December 31, 2022 00:00:00"
 let i = 0;
 let currentInterval = "";
 
-console.log("Version: 1");
+console.log("Version: 2");
 
 window.onload = function() {
     countDownSwitcher(i);
@@ -35,8 +35,8 @@ function countDownSwitcher() {
         gEbIDclass("buttonDefault", "button active");
         countDownDefault();
     } else if (i == 1) {
-        countDownMilliseconds();
         gEbIDclass("buttonMS", "button active");
+        countDownMilliseconds();
     } else{
         countDownDefault();
         gEbIDclass("buttonDefault", "button active");
@@ -47,7 +47,7 @@ function countDownSwitcher() {
 function gEbID(ID, content) {document.getElementById(ID).innerHTML = content; }
 function gEbIDclass(ID, newClass) {document.getElementById(ID).className = newClass; }
 
-function fullCountDownDefault(){
+function updateCountDownDefault(){
     var countDownDate = new Date(END_DATE).getTime();
     var now = new Date().getTime();
     var distance = countDownDate - now;
@@ -67,22 +67,30 @@ function countDownDefault(){
 		<div class="digit-text">Hours</div>
 		<div class="digit-text">Minutes</div>
 		<div class="digit-text">Seconds</div></div>`)
-        fullCountDownDefault();
+        updateCountDownDefault();
 
         currentInterval = setInterval(function() {
-            fullCountDownDefault();
+            updateCountDownDefault();
         }, 1000);
 }
+
+
+function updateCountDownMillisecond(){
+    var countDownDate = new Date(END_DATE).getTime();
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    gEbID("milliseconds", distance.toLocaleString('en-US'));
+
+}
+
 
 function countDownMilliseconds(){
     gEbID("countdown-container",`<div class="digit ms" id="milliseconds"></div>
     <div class="milliseconds">Milliseconds</div>`);
+    updateCountDownMillisecond()
 
     currentInterval = setInterval(function() {
-        var countDownDate = new Date(END_DATE).getTime();
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        gEbID("milliseconds", distance.toLocaleString('en-US'));
+        updateCountDownMillisecond()
     }, 1);
 }
 
