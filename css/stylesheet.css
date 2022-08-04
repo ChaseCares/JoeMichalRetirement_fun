@@ -17,10 +17,10 @@ footer{
     font-size: 8em;
     text-align: center;
     color: #929292;
+        font-family: "Courier", monospace;
 }
 .milliseconds{
     font-size: 1.5em;
-    /* font-weight: bold; */
     color: #929292;
     text-align: center;
     padding-bottom: 1em;
@@ -95,4 +95,7 @@ footer{
     grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
     text-align: center;
+}
+#milliseconds{
+    font-family: "Courier", monospace;
 }
