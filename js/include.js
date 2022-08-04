@@ -39,8 +39,18 @@ function countDownSwitcher() {
 
 function gEbID(ID, content) {document.getElementById(ID).innerHTML = content; }
 
-function countDownDefault(){
+function fullCountDownDefault(){
     var countDownDate = new Date(END_DATE).getTime();
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    gEbID("days", Math.floor(distance / (1000 * 60 * 60 * 24)));
+    gEbID("hours", Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    gEbID("minutes", Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+    gEbID("seconds", Math.floor((distance % (1000 * 60)) / 1000));
+}
+
+
+function countDownDefault(){
     gEbID("countdown-container", `<div id="countDownDefault-container"><div class="digit" id="days"></div>
 		<div class="digit" id="hours"></div>
 		<div class="digit" id="minutes"></div>
@@ -49,14 +59,10 @@ function countDownDefault(){
 		<div class="digit-text">Hours</div>
 		<div class="digit-text">Minutes</div>
 		<div class="digit-text">Seconds</div></div>`)
+        fullCountDownDefault();
 
         currentInterval = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            gEbID("days", Math.floor(distance / (1000 * 60 * 60 * 24)));
-            gEbID("hours", Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-            gEbID("minutes", Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-            gEbID("seconds", Math.floor((distance % (1000 * 60)) / 1000));
+            fullCountDownDefault();
         }, 1000);
 }
 
@@ -89,5 +95,3 @@ function questionMarkSwitcher(){
         }
     }, 5000);
 }
-
-
