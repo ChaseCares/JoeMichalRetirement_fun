@@ -23,7 +23,7 @@
         --fs-7: 4rem;
         --fs-4: 2rem;
         --fs-1: 1rem;
-        --fs-1-5: 1.5rem;
+        --fs-1-5: 1.2rem;
     }
     .digit-text{
     padding: 0rem 0.75rem  1rem 0.75rem;
@@ -38,6 +38,21 @@
         --fs-4: 2rem;
         --fs-1: 2rem;
         --fs-1-5: 1.25rem;
+    }
+    .digit-text{
+    padding: 0rem 0.75rem  1rem 0.75rem;
+    }
+    .button{padding: 10px 15px;}
+}
+
+@media (min-width: 1000px) {
+    :root {
+        --fs-10: 10rem;
+        --fs-8: 8rem;
+        --fs-7: 7rem;
+        --fs-4: 4rem;
+        --fs-1: 1rem;
+        --fs-1-5: 1.5rem;
     }
     .digit-text{
     padding: 0rem 0.75rem  1rem 0.75rem;
