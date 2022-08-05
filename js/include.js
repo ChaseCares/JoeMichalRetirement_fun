@@ -3,7 +3,7 @@ END_DATE = "December 31, 2022 00:00:00"
 let i = 0;
 let currentInterval = "";
 
-console.log("Version: v=0.8");
+console.log("Version: v=0.9");
 
 window.onload = function() {
     countDownSwitcher(i);
