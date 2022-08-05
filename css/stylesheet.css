@@ -86,7 +86,7 @@ footer {
     font-size: var(--fs-1-5);
     color: var(--gray);
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 0.68em;
 }
 .digit-text{
     font-size: var(--fs-1-5);
@@ -115,10 +115,6 @@ footer {
     text-align: center;
     padding-bottom:  0.3em;
 }
-
-/* .digit ms {
-    text-transform: ;
-} */
 
 .button-container {
     padding-top: 2em;
